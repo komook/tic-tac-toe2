@@ -25,3 +25,13 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.theme{
+  transition: ease-in 0.3s;
+}
+.theme.light{
+  background-color: rgb(224, 224, 224);
+}
+.theme.dark{
+  background-color: rgb(27, 27, 27);
+}

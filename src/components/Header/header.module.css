@@ -1,0 +1,14 @@
+.container{
+    
+    padding-right: 50px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+    background-color: rgb(105, 105, 105);
+    box-shadow: 0px 5px 15px 5px #ffffff41;
+    height: 50px;
+}
+.container.dark{
+    color: red;
+}

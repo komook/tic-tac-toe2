@@ -7,7 +7,15 @@
 
 
 /* //////////////////////////////////////////////////// */
-
+.App{
+    
+    background-color: rgb(105, 105, 105);
+    max-width: 30%;
+    border-radius: 40px;
+    box-shadow: 0px 5px 15px 5px #ffffff41;
+    margin: 0 auto;
+    margin-top: 100px;
+}
 .reset{
     font-size: 50px;
     border: 1px solid #ffffff;
@@ -32,6 +40,7 @@
     height: 100px;
     border: 2px solid #ffffff;
     
+    
 }
 .call.cell-win{
     background-color: rgba(48, 48, 48, 0.192);
@@ -53,4 +62,5 @@
     flex-wrap: wrap;
     max-width: 300px;
     margin: 0 auto;
+    
 }

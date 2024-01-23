@@ -1,7 +1,8 @@
 'use client'
-
+import styles from './header.module.css'
 
 import Link from "next/link";
+import DarkMode from '../DarkMode/darkmode'
 
 function Header() {
     const links = [
@@ -28,12 +29,15 @@ function Header() {
         
       ];
       
-  return (
-    <div className="flex gap-12 justify-end ">
+
       
+  return (
+    <div className={styles.container}>
+              <DarkMode />
         {links.map((link) =>(
             <Link key={link.id} href={link.url}>{link.title} </Link>
         ))}
+       
     </div>
   )
 }
