@@ -11,7 +11,7 @@ export default function Home() {
       <div>
         
           
-          <Header />
+          <Header></Header>
           <Button url="/about" text={'about'} />
           <Cross/>
         

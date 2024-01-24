@@ -1,5 +1,7 @@
 import Header from '@/components/Header/header'
 import React from 'react'
+import ThemeProvider from "@/components/Context/ThemeContext"
+
 async function getData() {
   const res = await fetch('https://jsonplaceholder.typicode.com/posts')
   if (!res.ok) {
@@ -13,11 +15,14 @@ const Blog = async () => {
   const users = data[1]
   
   return (
-    
-    <div className='mt-0 mb-0 mr-auto ml-auto max-w-7xl'>
-      <Header/>
-      <p> {users.body}</p>
-    </div>
+    <ThemeProvider>
+      <div className=''>
+      
+          <Header/>
+          <p> {users.body}</p>
+      </div>
+    </ThemeProvider>
+  
   )
 }
 

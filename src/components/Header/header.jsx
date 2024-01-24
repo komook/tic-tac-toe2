@@ -11,11 +11,7 @@ function Header() {
           title: "Играть",
           url: "/",
         },
-        {
-          id: 2,
-          title: "Чат",
-          url: "/chat",
-        },
+        
         {
           id: 3,
           title: "Об игре",
@@ -33,7 +29,7 @@ function Header() {
       
   return (
     <div className={styles.container}>
-              <DarkMode />
+        <DarkMode />
         {links.map((link) =>(
             <Link key={link.id} href={link.url}>{link.title} </Link>
         ))}
