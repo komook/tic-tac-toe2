@@ -7,39 +7,45 @@
 
 
 /* //////////////////////////////////////////////////// */
-.App{
+.container{
+    padding-bottom: 10%;
     
-    background-color: rgb(119, 119, 119);
-    max-width: 30%;
-    border-radius: 40px;
-    box-shadow: 10px 15px 15px 10px #00000041;
-    margin: 0 auto;
-    margin-top: 100px;
 }
+
+
+
 .reset{
+    
     font-size: 50px;
     border: 1px solid #ffffff;
-    margin-left: 45%;
+    
+    background-color: #222222;
+    border-radius: 20px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 15px;
     margin-top: 50px;
     padding: 5px;
     transition: 0.3s ease-in;
 }
 .reset:hover{
-    background-color: red;
-    box-shadow: 1px 1px 15px #000;
+    background-color: #3d3d3d;
+    box-shadow: 1px 1px 15px #292929;
 }
 
 .game-info,.game-field{
     text-align: center;
+    text-shadow: 1px 3px 2px black;
     margin-bottom: 100px;
     font-size: 66px;
+    
 }
 
 .call {
     width: 100px;
     height: 100px;
     border: 2px solid #ffffff;
-    
+    box-shadow: 0px 0px 5px black;
     
 }
 .call.cell-win{

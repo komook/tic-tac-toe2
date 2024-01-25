@@ -18,20 +18,33 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  
 }
 
 .theme{
   transition: ease-in 0.3s;
 }
 .theme.light{
-  background-color: rgb(224, 224, 224);
+  background-color: #d1d1d1;  
 }
 .theme.dark{
   background-color: rgb(27, 27, 27);
+}
+.theme.App{ 
+    
+  background-color: rgb(255, 0, 0);
+  max-width: 30%;
+  border-radius: 40px;
+  box-shadow: 10px 15px 15px 10px #00000041;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+.theme.dark.App{
+  background-color: #bdbdbdd7;
+}
+.theme.light.App{
+  background-color: #212121;
+}
+.theme.body_xo{
+  padding-bottom: 10%;
 }

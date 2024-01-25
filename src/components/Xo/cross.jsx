@@ -1,7 +1,8 @@
 'use client'
-
-import { useState } from "react"
+import ThemeProvider from '@/components/Context/ThemeContext'
+import { useState, useContext } from "react"
 import styles from './game.module.css'
+import { ThemeContext } from '../Context/ThemeContext'
 
 function Cross() {
     
@@ -60,24 +61,28 @@ function Cross() {
         setwinnerSequence(winner)
       }
   
-  
       const winnerSymbol = winnerSequence ? cells[winnerSequence[0]]: undefined
+      const {mode} = useContext(ThemeContext)
     return (
-      <div className={styles["App"]}>
-          <div className={styles['game-info']}>
-            {winnerSequence ? 'Победитель -' : 'Ход -'} {renderSymbol(winnerSymbol ?? CurrentStep)}
+      <ThemeProvider>
+      <div className={`body_xo theme ${mode}`}>
+        <div className={`App theme ${mode}` }>
+          
+            <div className={styles['game-info']}>
+              {winnerSequence ? `Победитель - ` : `Ход - `} {renderSymbol(winnerSymbol ?? CurrentStep)}
+            </div>
+            <div className={styles['game-field']}> 
+              {cells.map((symbol__, index) => {
+                const isWinner = winnerSequence?.includes(index);
+                return <button key={index} className={`${styles['call']} ${isWinner ? styles['cell-win']: ''}`} onClick={() => symbolSet(index)} >{symbol__ ? renderSymbol(symbol__) : null} </button> 
+              })}
+              
+              
+            </div>
+            <button className={styles.reset} onClick={() => reset()}>Reset</button>
           </div>
-          <div className={styles['game-field']}> 
-            {cells.map((symbol__, index) => {
-              const isWinner = winnerSequence?.includes(index);
-              return <button key={index} className={`${styles['call']} ${isWinner ? styles['cell-win']: ''}`} onClick={() => symbolSet(index)} >{symbol__ ? renderSymbol(symbol__) : null} </button> 
-            })}
-            
-            
-          </div>
-          <button className={styles.reset} onClick={() => reset()}>Reset</button>
         </div>
-      
+      </ThemeProvider>
     )
 }
 
