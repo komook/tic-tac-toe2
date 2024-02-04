@@ -23,6 +23,7 @@ body {
 
 .theme{
   transition: ease-in 0.3s;
+  
 }
 .theme.light{
   background-color: #d1d1d1;  
